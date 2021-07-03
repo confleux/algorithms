@@ -2,7 +2,28 @@
 <head>
 </head>
 <body>
-  <p> Hello world </p>
-  <p> It is a bubble sort </p>
+  <h3> Bubble sort </h3>
+  <p> Complexity: O(n<sup>2</sup>) <p>
+  <p> How does it work: each iteration of the outer for loop smaller or larger elements "bubble" to the top of the list </p> 
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"></img>
+  
+  <pre><code class="language-cpp hljs"> 
+    void BubbleSort (int * a, int n) {
+      for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < n - i - 1; ++j) {
+          if (a[j] > a[j + 1]) {
+            swap(a[j], a[j + 1]);
+          }
+        }
+      }
+    }
+  </code></pre>
+
+  <a href="https://en.wikipedia.org/wiki/Bubble_sort"> Wikipedia </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+  <script>hljs.highlightAll();</script>
 </body>
 </html>

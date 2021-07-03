@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+  <h3> Quick sort </h3>
+  <p> Complexity: average  O(nlog(n)) <p>
+  <p> How does it work: first we find a pivot, such that it stands on its final psoition, elements from one side are lower than it, element on the another side are larger than it, recursively call QuickSort for elements lower than pivot and for elements bigger than pivot</p> 
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif"></img>
+  
+  <pre><code class="language-cpp hljs"> 
+    int Partition (int * a, int left, int right) {
+      int pivot = a[right];
+      int i = left;
+      
+      for (int j = left; j < right; ++j) {
+        if (a[j] < pivot) {
+          swap(a[i], a[j]);
+          ++i;
+        }
+      }
+    
+      swap(a[i], a[right]);
+      return i;
+    }
+    
+    void QuickSort (int * a, int left, int right) {
+      if (left < right) {
+        int pivot = Partition(a, left, right); 
+        QuickSort(a, left, pivot - 1);
+        QuickSort(a, pivot + 1, right);
+      }
+    }
+  </code></pre>
+
+  <a href="https://en.wikipedia.org/wiki/Quicksort"> Wikipedia </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

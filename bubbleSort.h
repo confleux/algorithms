@@ -7,11 +7,6 @@ void BubbleSort (int * a, int n) {
         swap(a[j], a[j + 1]);
       }
     }
-
-    for (int j = 0; j < n; ++j) {
-      cout << a[j] << " ";
-    }
-    cout << endl;
   }
 }
 

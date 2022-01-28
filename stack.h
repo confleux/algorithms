@@ -1,6 +1,6 @@
 struct Node {
-    int value;
-    struct Node *next;
+  int value;
+  Node* next;
 };
 
 struct Stack {

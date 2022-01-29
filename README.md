@@ -1,1 +1,1 @@
-Here are the algorithms I learned so far.
+Here are the algorithms I've learned so far.
